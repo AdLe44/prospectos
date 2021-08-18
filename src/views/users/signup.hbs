@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h4>Registrar usuario</h4>
+            </div>
+            <div class="card-body">
+                <form action="/users/signup" method="POST">
+                    <div class="mb-3">
+                        <label for="nombre"  class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" pattern="[A-zÀ-ÿ\s]+" maxlength="200" placeholder="Ingrese el nombre del usuario" value="{{nombre}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo"  class="form-label">Correo:</label>
+                        <input type="email" class="form-control" name="correo" id="correo" pattern="^[A-z\d._-]+@(?:[A-z\d](?:[A-z\d-]*[A-z\d])?\.)+[A-z\d](?:[A-z\d-]*[A-z\d])?$" maxlength="255" placeholder="Ingrese el correo del usuario" value="{{correo}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="clave"  class="form-label">Clave:</label>
+                        <input type="password" class="form-control" name="clave" id="clave" maxlength="16" placeholder="Ingrese la clave del usuario" value="{{clave}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confclave"  class="form-label">Confirmar Clave:</label>
+                        <input type="password" class="form-control" name="confclave" id="confclave" maxlength="16" placeholder="Ingrese nuevamente la clave" value="{{confclave}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="areaS"  class="form-label">Área:</label>
+                        <select class="form-select" aria-label="Seleccione el área al que pertenece el usuario" name="areaS" id="areaS" value="{{area}}">
+                            <option value="Evaluadores">Evaluadores</option>
+                            <option value="Promototores">Promototores</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 d-grid gap-2">
+                        <button type="submit" class="btn btn-success">Registrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

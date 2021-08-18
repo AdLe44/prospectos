@@ -1,0 +1,50 @@
+<div class="container">
+    <table class="table table-dark table-borderless table-striped text-center">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido paterno</th>
+                <th scope="col">Apellido materno</th>
+                <th scope="col">Estatus</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each prospec}}
+                <tr>
+                    <th scope="col">{{NombreAdd}}</th>
+                    <td scope="col">{{APAdd}}</td>
+                    <td scope="col">{{AMAdd}}</td>
+                    <td scope="col" class="Estatus_{{Estatus}}">{{Estatus}}</td>
+                    <td scope="col" class="d-flex justify-content-center align-items-center table-active">
+                        <a href="/prospectos/estatusAuth/{{_id}}" class="btn btn-success accionesEstatus"><i class="fas fa-check"></i></a>
+                        <a href="/prospectos/estatusRech/{{_id}}" class="btn btn-danger accionesEstatus"><i class="fas fa-times"></i></a>
+                    </td>
+                </tr>
+            {{else}}
+                <tr>
+                    <td colspan="5" class="table-active">
+                        No existen prosectos pendientes.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="table-active">
+                        <a href="/prospectos/add" class="btn btn-block btn-dark">Agregar nuevo prospecto</a>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<style>
+    .Estatus_Autorizado{
+        color: rgb(40, 163, 40);
+    }
+    .Estatus_Rechazado{
+        color: rgb(189, 30, 30);
+    }
+    .accionesEstatus{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+</style>

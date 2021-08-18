@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card mt-4 mx-auto">
+            <div class="card-header">
+                <h4>Iniciar Sesión</h4>
+            </div>
+            <img src="/img/logo.png" class="logo rounded-circle mx-auto d-block m-4" alt="logotipo">
+            <div class="card-body">
+                <form action="/users/signin" method="POST">
+                    <div class="mb-3">
+                        <label for="correo"  class="form-label">Correo:</label>
+                        <input type="email" class="form-control" name="correo" id="correo" pattern="^[A-z\d._-]+@(?:[A-z\d](?:[A-z\d-]*[A-z\d])?\.)+[A-z\d](?:[A-z\d-]*[A-z\d])?$" maxlength="255" placeholder="Ingrese el correo del usuario" value="{{correo}}" autofocus>
+                    </div>
+                    <div class="mb-3">
+                        <label for="clave"  class="form-label">Clave:</label>
+                        <input type="password" class="form-control" name="clave" id="clave" maxlength="16" placeholder="Ingrese la clave del usuario" value="{{clave}}">
+                    </div>
+                    <div class="mb-3 d-grid gap-2">
+                        <button type="submit" class="btn btn-success">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

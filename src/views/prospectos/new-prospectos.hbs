@@ -1,0 +1,64 @@
+<div class="col-md-6 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h1>Agregar prospecto</h1>
+        </div>
+        <div class="card-body">
+            <form action="/prospectos/new-prospecto" method="POST">
+                <div class="mb-3">
+                    <label for="NombreAdd" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" name="NombreAdd" id="NombreAdd" pattern="[A-zÀ-ÿ\s]+" maxlength="100" placeholder="Ingrese su Nombre" autofocus {{!-- required --}}>
+                </div>
+                <div class="mb-3">
+                    <label for="APAdd" class="form-label">Apellido Paterno:</label>
+                    <input type="text" class="form-control" name="APAdd" id="APAdd" pattern="[A-zÀ-ÿ\s]+" maxlength="50" placeholder="Ingrese su Apellido Paterno" {{!-- required --}}>
+                </div>
+                <div class="mb-3">
+                    <label for="AMAdd" class="form-label">Apellido Materno:</label>
+                    <input type="text" class="form-control" name="AMAdd" id="AMAdd" pattern="[A-zÀ-ÿ\s]+" maxlength="50" placeholder="Ingrese su Apellido Materno" {{!-- required --}}>
+                </div>
+                <div class="mb-3">
+                    <label for="CalleAdd" class="form-label">Calle:</label>
+                    <input type="text" class="form-control" name="CalleAdd" id="CalleAdd" pattern="[A-zÀ-ÿ\s]+" maxlength="200" placeholder="Ingrese el nombre de su calle" {{!-- required --}}>
+                </div>
+                <div class="mb-3">
+                    <label for="NumeroAdd" class="form-label">Número:</label>
+                    <input type="number" class="form-control" name="NumeroAdd" id="NumeroAdd" maxlength="10" placeholder="Ingrese el numero de su casa" {{!-- required --}}>
+                </div>
+                <div class="mb-3">
+                    <label for="ColAdd" class="form-label">Colonia:</label>
+                    <input type="text" class="form-control" name="ColAdd" id="ColAdd" pattern="[A-zÀ-ÿ\s]+" maxlength="100" placeholder="Ingrese la colonia donde vive" {{!-- required --}}>
+                </div>
+                <div class="mb-3">
+                    <label for="CPAdd" class="form-label">Código Postal:</label>
+                    <input type="number" class="form-control" name="CPAdd" id="CPAdd" pattern="[\d]{5}" maxlength="5" placeholder="Ingrese su código postal" {{!-- required --}}>
+                </div>
+                <div class="mb-3">
+                    <label for="TelAdd" class="form-label">Teléfono:</label>
+                    <input type="number" class="form-control" name="TelAdd" id="TelAdd" pattern="[\d]{5}" maxlength="5" placeholder="Ingrese su número de teléfono" {{!-- required --}}>
+                </div>
+                <div class="mb-3">
+                    <label for="RFCAdd" class="form-label">RFC:</label>
+                    <input type="text" class="form-control" name="RFCAdd" id="RFCAdd" {{!-- pattern="/^([A-Z,Ñ,&]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[A-Z|\d]{3})$/" --}} maxlength="18" placeholder="Ingrese su número de teléfono" {{!-- required --}}>
+                </div>
+                <div class="mb-3">
+                    <label for="DocAdd" class="form-label">Nombre documento:</label>
+                    <input type="file" class="form-control" aria-label="documento" name="DocAdd" id="DocAdd" {{!-- required --}}>
+                </div>
+                <div class="mb-3">
+                    <div class="row">
+                        <button class="btn btn-success col-4" type="submit">
+                            Enviar
+                        </button>
+                        <span class="col-4 text-center">
+                            Estatus: nulo
+                        </span>
+                        <a href="/prospectos" class="btn btn-secondary col-4">
+                            Salir
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
